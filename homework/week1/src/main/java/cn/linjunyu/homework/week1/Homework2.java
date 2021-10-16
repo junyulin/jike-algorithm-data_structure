@@ -1,4 +1,4 @@
-package cn.linjunyu.homeword.week1;
+package cn.linjunyu.homework.week1;
 
 /**
  * 21. 合并两个有序链表
@@ -6,7 +6,7 @@ package cn.linjunyu.homeword.week1;
  * @author LinJn
  * @since 2021/10/9 17:26
  */
-public class Homeword2 {
+public class Homework2 {
 
     static public class ListNode {
 

@@ -1,4 +1,4 @@
-package cn.linjunyu.homeword.week2;
+package cn.linjunyu.homework.week2;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,7 +11,7 @@ import java.util.Map;
  * @author LinJn
  * @since 2021/10/17 4:35
  */
-public class Homeword1 {
+public class Homework1 {
 
     /**
      * map 的简单运用，注意分隔符需要转义
@@ -41,8 +41,8 @@ public class Homeword1 {
     }
 
     public static void main(String[] args) {
-        final Homeword1 homeword = new Homeword1();
+        final Homework1 homework = new Homework1();
         String[] str = {"9001 discuss.leetcode.com"};
-        final List<String> list = homeword.subdomainVisits(str);
+        final List<String> list = homework.subdomainVisits(str);
     }
 }

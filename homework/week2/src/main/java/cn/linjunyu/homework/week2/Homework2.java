@@ -1,4 +1,4 @@
-package cn.linjunyu.homeword.week2;
+package cn.linjunyu.homework.week2;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,7 +11,7 @@ import java.util.Map;
  * @author LinJn
  * @since 2021/10/17 4:38
  */
-public class HomeWord2 {
+public class Homework2 {
 
     /**
      * 第一个版本：把简单问题复杂化的版本。
@@ -137,8 +137,8 @@ public class HomeWord2 {
 //         int[] nums = {1, 2, 2, 3, 1};
 //        int[] nums = {2,1,1,2,1,3,3,3,1,3,1,3,2};
         int[] nums = {1,3,2,2,3,1};
-        final HomeWord2 homeWord = new HomeWord2();
-        final int shortestSubArray = homeWord.findShortestSubArray3(nums);
+        final Homework2 homework = new Homework2();
+        final int shortestSubArray = homework.findShortestSubArray3(nums);
         System.out.println(shortestSubArray);
     }
 }

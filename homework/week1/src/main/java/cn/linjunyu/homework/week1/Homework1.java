@@ -1,4 +1,4 @@
-package cn.linjunyu.homeword.week1;
+package cn.linjunyu.homework.week1;
 
 /**
  * 作业1：
@@ -7,7 +7,7 @@ package cn.linjunyu.homeword.week1;
  * @author LinJn
  * @since 2021/10/4 9:13
  */
-public class Homeword1 {
+public class Homework1 {
 
     /**
      * 第一版本：依次遍历数组，然后加1，需要处理加1之后超过10的情况
@@ -53,9 +53,9 @@ public class Homeword1 {
     }
 
     public static void main(String[] args) {
-        final Homeword1 homeword1 = new Homeword1();
+        final Homework1 homework = new Homework1();
         int[] arr = {9,8,7,6,5,4,3,2,1,0};
-        final int[] ints = homeword1.plusOne(arr);
+        final int[] ints = homework.plusOne(arr);
         System.out.println();
     }
 

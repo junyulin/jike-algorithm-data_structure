@@ -1,4 +1,4 @@
-package cn.linjunyu.homeword.week2;
+package cn.linjunyu.homework.week2;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,7 +9,7 @@ import java.util.Map;
  * @author LinJn
  * @since 2021/10/17 2:10
  */
-public class Homeword4 {
+public class Homework4 {
 
     /**
      * 前缀和 + 两数之和（之差）
