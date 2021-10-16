@@ -53,7 +53,7 @@ public class Homework1 {
 
 使用了两种解法：
 
-- 第一种解法。把简单的问题复杂化了。看到连续子数组将想要使用前缀和的方式来解决，解决方式和 [leetcode .1248. 统计「优美子数组」](https://leetcode-cn.com/problems/count-number-of-nice-subarrays/) 类似，把数组内频数最高的元素置为 1，其他置为0，然后求连续子数组的和为最高频数。
+- 第一种解法。把简单的问题复杂化了。看到连续子数组就想要使用前缀和的方式来解决，解决方式和 [leetcode .1248. 统计「优美子数组」](https://leetcode-cn.com/problems/count-number-of-nice-subarrays/) 类似，把数组内频数最高的元素置为 1，其他置为0，然后求连续子数组的和为最高频数。
 - 第二种解法。实际上只要求最高频次的值的最前和最后索引即可。 使用 `count` 记录最高频次，用一个 `map` 记录每一个值出现的频次和最前最后索引的位置。
 
 ```java
@@ -193,7 +193,7 @@ public class Homework2 {
 
 ## leetcode 560. 和为 K 的子数组
 
-前缀和 + 两数之和（差）
+前缀和 + 两数之和（差）的运用。
 
 ```java
 public class Homework4 {
