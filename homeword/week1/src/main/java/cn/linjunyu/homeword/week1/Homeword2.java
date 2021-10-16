@@ -1,4 +1,4 @@
-package cn.linjunyu.week1.homeword;
+package cn.linjunyu.homeword.week1;
 
 /**
  * 21. 合并两个有序链表

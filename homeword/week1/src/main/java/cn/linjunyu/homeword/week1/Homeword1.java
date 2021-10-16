@@ -1,4 +1,4 @@
-package cn.linjunyu.week1.homeword;
+package cn.linjunyu.homeword.week1;
 
 /**
  * 作业1：

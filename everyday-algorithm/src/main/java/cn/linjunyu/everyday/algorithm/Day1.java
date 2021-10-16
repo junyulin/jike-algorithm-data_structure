@@ -13,7 +13,7 @@ package cn.linjunyu.everyday.algorithm;
  * @author LinJn
  * @since 2021/10/1 14:54
  */
-public class day1 {
+public class Day1 {
 
     public void merge(int[] nums1, int m, int[] nums2, int n) {
 

@@ -20,7 +20,7 @@ public class DoubleLinkedListTest {
             linkedList.addFirst(i);
         }
         System.out.println(linkedList);
-        System.out.println("索引为 3 的位置存 13");
+        System.out.println("在索引为 2 的位置插入 13");
         linkedList.add(2, 13);
         System.out.println(linkedList);
         System.out.println("取索引为 12 的元素");
@@ -28,6 +28,9 @@ public class DoubleLinkedListTest {
         System.out.println(integer);
         System.out.println("删除索引为 2 的元素");
         linkedList.remove(2);
+        System.out.println(linkedList);
+        System.out.println("更新索引为 2 的元素为 55");
+        linkedList.update(2, 55);
         System.out.println(linkedList);
     }
 

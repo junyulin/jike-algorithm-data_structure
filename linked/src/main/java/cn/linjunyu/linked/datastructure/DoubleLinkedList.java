@@ -32,20 +32,22 @@ public class DoubleLinkedList<T> {
 
     }
 
-    private final Node dummyNode;
+    private final Node dummyHeadNode;
+
+    private final Node dummyTailNode;
 
     private int size;
 
     public DoubleLinkedList() {
-        this.dummyNode = new Node();
+        this.dummyHeadNode = new Node();
+        this.dummyTailNode = new Node();
+        this.dummyHeadNode.next = this.dummyTailNode;
+        this.dummyTailNode.prev = this.dummyHeadNode;
     }
 
     private Node getNode(int i) {
-        if (i >= this.size) {
-            throw new IllegalArgumentException();
-        }
-        Node node = dummyNode.next;
-        while (i > 0) {
+        Node node = dummyHeadNode;
+        while (i >= 0) {
             node = node.next;
             i = i - 1;
         }
@@ -53,6 +55,9 @@ public class DoubleLinkedList<T> {
     }
 
     public T get(int i) {
+        if (i >= this.size) {
+            throw new IllegalArgumentException();
+        }
         return this.getNode(i).val;
     }
 
@@ -60,31 +65,21 @@ public class DoubleLinkedList<T> {
         if (i > this.size) {
             throw new IllegalArgumentException();
         }
-        Node node = dummyNode.next;
-        while (i > 0) {
-            node = node.next;
-            i = i - 1;
-        }
-        final Node newNode = new Node(t);
-        if (node == null) {
-            newNode.prev = dummyNode;
-            newNode.next = null;
-            dummyNode.next = newNode;
-            return;
-        }
-        newNode.next = node.next;
-        node.next = newNode;
-
-        newNode.prev = node;
-        /*node.prev.next = newNode;
-        newNode.prev = node.prev;
-
-        newNode.next = node;
-        node.next.prev = newNode;*/
+        final Node currNode = new Node(t);
+        final Node node = this.getNode(i);
+        node.prev.next = currNode;
+        currNode.prev = node.prev;
+        currNode.next = node;
+        node.prev = currNode;
         this.size = this.size + 1;
     }
 
     public void addLast(T t) {
+        /*final Node currNode = new Node(t);
+        this.dummyTailNode.prev.next = currNode;
+        currNode.prev = this.dummyTailNode.prev;
+        currNode.next = this.dummyTailNode;
+        this.dummyTailNode.prev = currNode;*/
         this.add(this.size, t);
     }
 
@@ -93,14 +88,38 @@ public class DoubleLinkedList<T> {
     }
 
     public void remove(int i) {
+        if (i >= this.size) {
+            throw new IllegalArgumentException();
+        }
         final Node node = this.getNode(i);
         node.prev.next = node.next;
         node.next.prev = node.prev;
         this.size = this.size - 1;
     }
 
-    private void update(int i, T t) {
+    public void update(int i, T t) {
+        if (i >= this.size) {
+            throw new IllegalArgumentException();
+        }
         final Node node = this.getNode(i);
         node.val = t;
     }
- }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        Node node = dummyHeadNode;
+        sb.append("size：").append(this.size).append("\n");
+        while (node != null) {
+            sb.append(node.val).append("->");
+            node = node.next;
+        }
+        sb.append("\n");
+        Node node2 = dummyTailNode;
+        while (node2 != null) {
+            sb.append(node2.val).append("->");
+            node2 = node2.prev;
+        }
+        return sb.toString();
+    }
+}
