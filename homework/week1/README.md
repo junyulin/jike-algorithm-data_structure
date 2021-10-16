@@ -7,7 +7,7 @@
 ## leetcode 61.加一
 
 ```java
-public class Homeword1 {
+public class Homework1 {
 
     /**
      * 第一版本：依次遍历数组，然后加1，需要处理加1之后超过10的情况
@@ -53,9 +53,9 @@ public class Homeword1 {
     }
 
     public static void main(String[] args) {
-        final Homeword1 homeword1 = new Homeword1();
+        final Homework1 homework = new Homework1();
         int[] arr = {9,8,7,6,5,4,3,2,1,0};
-        final int[] ints = homeword1.plusOne(arr);
+        final int[] ints = homework.plusOne(arr);
         System.out.println();
     }
 
@@ -69,7 +69,7 @@ public class Homeword1 {
 两种做法：递归和 while 循环。while 循环使用的是双指针方法。
 
 ```java
-public class Homeword2 {
+public class Homework2 {
 
     static public class ListNode {
 

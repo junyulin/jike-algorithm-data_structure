@@ -21,6 +21,7 @@ public class Homework1 {
         for (String cpdomain : cpdomains) {
             final String[] split = cpdomain.split(" ");
             final Integer count = Integer.valueOf(split[0]);
+            // 注意转义
             final String[] split1 = split[1].split("\\.");
             map.put(split[1], map.getOrDefault(split[1], 0) + count);
             StringBuilder s = new StringBuilder();
