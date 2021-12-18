@@ -12,14 +12,19 @@
         <module>array</module>
         <module>everyday-algorithm</module>
         <module>linked</module>
-        <module>homeword</module>
+        <module>homework</module>
         <module>stack</module>
         <module>queue</module>
+        <module>min-heap</module>
+        <module>binary-search</module>
+        <module>sort</module>
+        <module>trie</module>
+        <module>union-find-set</module>
     </modules>
 
     <properties>
-        <maven.compiler.source>14</maven.compiler.source>
-        <maven.compiler.target>14</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
 </project>
